@@ -1,4 +1,4 @@
-# Portfolio-informatique
+# Portfolio
 # 👩🏽‍💻 Seynabou Ndao Diallo — Administratrice d’Infrastructures Sécurisées
 
 ### Systèmes • Réseaux • Virtualisation • Cybersécurité
