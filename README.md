@@ -1,5 +1,5 @@
 # Portfolio-informatique
-# 👩🏽‍💻 Seynabou — Administratrice systèmes & infrastructures
+# 👩🏽‍💻 Seynabou Ndao Diallo — Administratrice d’Infrastructures Sécurisées
 
 ### Systèmes • Réseaux • Virtualisation • Cybersécurité
 
@@ -55,6 +55,5 @@ Je souhaite poursuivre mon développement dans les domaines de l’**administrat
 
 ## 📫 Contact
 
-* **LinkedIn :** [À ajouter]
-* **Email :** [À ajouter]
-* **CV :** [À ajouter]
+* **LinkedIn :** [https://www.linkedin.com/in/seynandao]
+* **Email :** [seynaboudiallo1205@gmail.com]
