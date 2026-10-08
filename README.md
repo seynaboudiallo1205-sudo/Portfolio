@@ -5,7 +5,7 @@
 
 Bienvenue sur mon portfolio professionnel.
 
-Je suis actuellement en formation d’Administratrice d’infrastructures sécurisées (AIS)** et je développe mes compétences dans l’administration des systèmes, des réseaux et des infrastructures informatiques.
+Je suis actuellement en formation d’**Administratrice d’infrastructures sécurisées (AIS)** et je développe mes compétences dans l’administration des systèmes, des réseaux et des infrastructures informatiques.
 
 Mon parcours m’a permis de travailler sur différents environnements **Windows et Linux**, ainsi que sur des technologies liées à la virtualisation, à la supervision et à la sécurité des infrastructures.
 
