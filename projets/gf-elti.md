@@ -57,7 +57,9 @@ La documentation concernait notamment :
 * câblage réseau.
 
 Cette activité m’a permis de mieux comprendre l’organisation physique d’une infrastructure informatique et l’importance d’une documentation claire pour faciliter les interventions.
-![Schéma du centre de câblage de GF-ELTI](../schema-reseau-gf-elti.jpg)
+
+![Schéma de l’infrastructure GF-ELTI](../schema-reseau-gf-elti.jpg)
+
 ---
 
 ## 🖥️ 3. Support à distance avec AnyDesk
