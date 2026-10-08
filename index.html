@@ -1,978 +1,787 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#382820">
-  <meta name="description" content="Portfolio professionnel en administration systèmes, infrastructures IT et sécurisation. Projets GF-ELTI et ITS.">
-  <title>Portfolio | Administration Systèmes & Infrastructures</title>
-
+  <meta name="description" content="Portfolio professionnel en administration des systèmes, infrastructures informatiques et sécurisation des environnements IT.">
+  <title>Portfolio | Administration des systèmes et infrastructures</title>
   <style>
     :root {
-      --dark: #382820;
-      --brown: #634638;
-      --beige: #f1e7db;
-      --cream: #faf7f2;
-      --salmon: #cf8c78;
-      --gray: #d9d4ce;
-      --muted: #82766d;
+      --cream: #f7f2eb;
+      --beige: #e9dccd;
+      --salmon: #d99583;
+      --brown: #684a3d;
+      --dark: #302c29;
+      --gray: #77716c;
       --white: #fffdf9;
-      --line: rgba(99, 70, 56, .17);
-      --radius: 20px;
-      --shadow: 0 14px 45px rgba(56, 40, 32, .07);
+      --border: #e3d6ca;
     }
-
-    * { box-sizing: border-box; }
-
-    html { scroll-behavior: smooth; scroll-padding-top: 90px; }
-
-    body {
+    * {
+      box-sizing: border-box;
       margin: 0;
+      padding: 0;
+    }
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 90px;
+    }
+    body {
+      font-family: Arial, Helvetica, sans-serif;
       background: var(--cream);
       color: var(--dark);
-      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      line-height: 1.75;
-      -webkit-font-smoothing: antialiased;
+      line-height: 1.7;
     }
-
-    a { color: inherit; }
-
-    a:focus-visible, button:focus-visible {
-      outline: 3px solid var(--salmon);
-      outline-offset: 4px;
+    a {
+      color: inherit;
+      text-decoration: none;
     }
-
+    img {
+      max-width: 100%;
+    }
     .container {
-      width: min(1120px, calc(100% - 44px));
+      width: min(1100px, 90%);
       margin: auto;
     }
-
-    .topbar {
+    header {
       position: sticky;
       top: 0;
-      z-index: 20;
-      background: rgba(250, 247, 242, .94);
-      backdrop-filter: blur(14px);
-      border-bottom: 1px solid var(--line);
+      z-index: 10;
+      background: rgba(247, 242, 235, 0.96);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(10px);
     }
-
-    .nav {
+    nav {
       min-height: 76px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 24px;
+      gap: 20px;
     }
-
     .brand {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      text-decoration: none;
-      font-family: Georgia, serif;
-      font-size: 20px;
-      font-weight: bold;
-      white-space: nowrap;
+      color: var(--brown);
+      font-weight: 800;
+      font-size: 1.05rem;
+      letter-spacing: 1px;
     }
-
-    .brand-mark {
-      display: grid;
-      place-items: center;
-      width: 43px;
-      height: 43px;
-      background: var(--dark);
-      color: var(--beige);
-      border-radius: 13px;
-      font-size: 18px;
-      letter-spacing: -1px;
-    }
-
     .nav-links {
       display: flex;
       flex-wrap: wrap;
-      gap: 23px;
-      align-items: center;
+      gap: 20px;
+      font-size: 0.88rem;
     }
-
-    .nav-links a {
-      font-size: 12px;
-      color: var(--muted);
-      text-decoration: none;
-      font-weight: 650;
-      transition: color .2s;
+    .nav-links a:hover {
+      color: var(--salmon);
     }
-
-    .nav-links a:hover { color: var(--salmon); }
-
-    .hero { padding: 95px 0 75px; }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.45fr .75fr;
-      align-items: center;
-      gap: 60px;
+    .hero {
+      padding: 105px 0 90px;
+      background:
+        radial-gradient(circle at 85% 20%, #e9c9b9 0, transparent 28%),
+        linear-gradient(135deg, #f7f2eb, #eee1d3);
     }
-
     .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
+      display: inline-block;
+      color: var(--brown);
+      background: #e9dccd;
+      border-radius: 30px;
+      padding: 7px 14px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 22px;
+    }
+    h1 {
+      max-width: 850px;
+      color: var(--brown);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2.5rem, 6vw, 4.8rem);
+      line-height: 1.12;
+      font-weight: 500;
+      margin-bottom: 24px;
+    }
+    .hero p {
+      max-width: 700px;
+      color: var(--gray);
+      font-size: 1.08rem;
+      margin-bottom: 30px;
+    }
+    .button {
+      display: inline-block;
+      padding: 13px 22px;
+      border-radius: 7px;
+      background: var(--brown);
+      color: white;
+      font-size: 0.92rem;
+      font-weight: 700;
+      transition: 0.2s ease;
+    }
+    .button:hover {
+      background: #50372d;
+      transform: translateY(-2px);
+    }
+    .button.secondary {
+      background: transparent;
+      color: var(--brown);
+      border: 1px solid var(--brown);
+      margin-left: 10px;
+    }
+    section {
+      padding: 82px 0;
+    }
+    .section-heading {
+      margin-bottom: 35px;
+    }
+    .section-heading span {
+      display: block;
+      color: var(--salmon);
+      font-size: 0.8rem;
+      font-weight: 800;
       text-transform: uppercase;
       letter-spacing: 2px;
-      font-size: 10px;
-      font-weight: 800;
+      margin-bottom: 8px;
+    }
+    h2 {
       color: var(--brown);
-    }
-
-    .eyebrow::before {
-      content: "";
-      width: 28px;
-      height: 2px;
-      background: var(--salmon);
-    }
-
-    h1, h2, h3, p { margin-top: 0; }
-
-    h1, h2 {
       font-family: Georgia, "Times New Roman", serif;
       font-weight: 500;
-      letter-spacing: -1.4px;
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.2;
     }
-
-    h1 {
-      margin: 23px 0;
-      font-size: clamp(42px, 6vw, 72px);
-      line-height: 1.09;
+    h3 {
+      color: var(--brown);
+      font-size: 1.15rem;
+      margin-bottom: 12px;
     }
-
-    h1 em {
-      color: var(--salmon);
-      font-weight: 500;
+    .intro {
+      max-width: 780px;
+      color: var(--gray);
+      font-size: 1.02rem;
     }
-
-    .hero-copy {
-      max-width: 570px;
-      color: var(--muted);
-      font-size: 15px;
+    .about-grid,
+    .project-grid,
+    .skills-grid,
+    .schema-gallery {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px;
     }
-
-    .actions {
+    .card {
+      padding: 27px;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 15px;
+      box-shadow: 0 8px 25px rgba(75, 53, 40, 0.035);
+    }
+    .card p {
+      color: var(--gray);
+    }
+    .tag-list {
       display: flex;
       flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 30px;
+      gap: 9px;
+      margin-top: 18px;
     }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      padding: 12px 19px;
-      border-radius: 9px;
-      text-decoration: none;
-      font-size: 12px;
-      font-weight: 750;
-      border: 1px solid var(--dark);
-      transition: transform .2s, background .2s;
-    }
-
-    .btn:hover { transform: translateY(-2px); }
-
-    .btn-dark { background: var(--dark); color: white; }
-    .btn-dark:hover { background: var(--brown); }
-    .btn-light { background: transparent; color: var(--dark); }
-    .btn-light:hover { background: var(--beige); }
-
-    .hero-art {
-      position: relative;
-      min-height: 335px;
-      border-radius: 150px 150px 24px 24px;
-      background: var(--beige);
-      overflow: hidden;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .hero-art::before {
-      content: "";
-      position: absolute;
-      width: 240px;
-      height: 240px;
-      border: 1px solid rgba(99,70,56,.23);
-      border-radius: 50%;
-    }
-
-    .hero-art::after {
-      content: "";
-      position: absolute;
-      width: 180px;
-      height: 180px;
-      border: 1px solid rgba(99,70,56,.17);
-      border-radius: 50%;
-    }
-
-    .monogram {
-      position: relative;
-      z-index: 1;
-      font-family: Georgia, serif;
-      font-size: 108px;
+    .tag {
+      display: inline-block;
+      background: #f0e5da;
       color: var(--brown);
-      letter-spacing: -10px;
-      padding-right: 10px;
-    }
-
-    .art-caption {
-      position: absolute;
-      z-index: 2;
-      bottom: 20px;
-      left: 20px;
-      right: 20px;
-      padding: 13px;
-      border: 1px solid rgba(255,255,255,.6);
-      background: rgba(255,253,249,.85);
-      backdrop-filter: blur(10px);
-      border-radius: 10px;
-      text-align: center;
-      font-size: 11px;
-      color: var(--brown);
-    }
-
-    .stats {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      margin-top: 50px;
-      border-top: 1px solid var(--line);
-      border-bottom: 1px solid var(--line);
-    }
-
-    .stat {
-      padding: 22px 15px 22px 0;
-    }
-
-    .stat + .stat {
-      padding-left: 25px;
-      border-left: 1px solid var(--line);
-    }
-
-    .stat strong {
-      display: block;
-      font-family: Georgia, serif;
-      font-size: 25px;
-      font-weight: 500;
-    }
-
-    .stat span {
-      color: var(--muted);
-      font-size: 11px;
-    }
-
-    .section { padding: 78px 0; }
-
-    .section-dark {
-      background: var(--dark);
-      color: var(--beige);
-    }
-
-    .section-heading {
-      display: flex;
-      justify-content: space-between;
-      align-items: end;
-      gap: 25px;
-      margin-bottom: 36px;
-    }
-
-    h2 {
-      font-size: clamp(32px, 4vw, 46px);
-      line-height: 1.2;
-      margin: 13px 0 0;
-    }
-
-    .section-heading > p {
-      max-width: 390px;
-      margin: 0;
-      color: var(--muted);
-      font-size: 13px;
-    }
-
-    .section-dark .eyebrow { color: #e3b3a4; }
-    .section-dark h2 { color: var(--cream); }
-    .section-dark .section-heading > p { color: #c4b3a6; }
-
-    .about-grid {
-      display: grid;
-      grid-template-columns: .8fr 1.2fr;
-      gap: 55px;
-      align-items: start;
-    }
-
-    .about-label {
-      padding: 25px;
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      background: var(--white);
-    }
-
-    .about-label .number {
-      font-family: Georgia, serif;
-      color: var(--salmon);
-      font-size: 48px;
-    }
-
-    .about-label h3 { margin: 8px 0; font-size: 17px; }
-
-    .about-label p {
-      color: var(--muted);
-      font-size: 12px;
-      margin-bottom: 0;
-    }
-
-    .about-copy p {
-      font-size: 14px;
-      color: var(--muted);
-    }
-
-    .about-copy p:first-child {
-      color: var(--dark);
-      font-size: 17px;
-    }
-
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 14px;
-    }
-
-    .skill {
-      background: rgba(255,253,249,.045);
-      border: 1px solid rgba(241,231,219,.15);
-      padding: 23px 19px;
-      border-radius: 14px;
-      transition: transform .2s, background .2s;
-    }
-
-    .skill:hover {
-      transform: translateY(-4px);
-      background: rgba(255,253,249,.08);
-    }
-
-    .skill-icon {
-      display: grid;
-      place-items: center;
-      width: 42px;
-      height: 42px;
-      background: rgba(207,140,120,.17);
-      color: #e8b3a3;
-      border-radius: 12px;
-      font-family: Georgia, serif;
-      font-size: 18px;
-    }
-
-    .skill h3 { font-size: 14px; margin: 19px 0 8px; }
-    .skill p { color: #c4b3a6; font-size: 11px; margin-bottom: 0; }
-
-    .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 22px;
-    }
-
-    .project {
-      border: 1px solid var(--line);
-      background: var(--white);
-      border-radius: var(--radius);
-      overflow: hidden;
-      transition: transform .25s, box-shadow .25s;
-    }
-
-    .project:hover {
-      transform: translateY(-5px);
-      box-shadow: var(--shadow);
-    }
-
-    .project-top {
-      min-height: 170px;
-      background: var(--beige);
-      padding: 25px;
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      gap: 15px;
-    }
-
-    .project-symbol {
-      font-family: Georgia, serif;
-      font-size: 57px;
-      line-height: 1;
-      color: var(--brown);
-      letter-spacing: -4px;
-    }
-
-    .project-type {
-      font-size: 9px;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      color: var(--brown);
-      border: 1px solid rgba(99,70,56,.25);
-      padding: 6px 10px;
       border-radius: 30px;
+      padding: 6px 11px;
+      font-size: 0.8rem;
+      font-weight: 700;
     }
-
-    .project-body { padding: 27px; }
-
-    .project-body h3 {
-      font-family: Georgia, serif;
-      font-size: 25px;
-      font-weight: 500;
+    .skills-section,
+    .projects-section {
+      background: #f0e7dd;
+    }
+    .skill-card {
+      border-top: 3px solid var(--salmon);
+    }
+    .skill-card ul,
+    .project-card ul {
+      padding-left: 20px;
+      margin-top: 12px;
+      color: var(--gray);
+    }
+    .skill-card li,
+    .project-card li {
+      margin-bottom: 7px;
+    }
+    .project-card {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .project-number {
+      color: var(--salmon);
+      font-size: 0.85rem;
+      font-weight: 800;
+      letter-spacing: 1.5px;
       margin-bottom: 10px;
     }
-
-    .project-body > p {
-      color: var(--muted);
-      font-size: 12px;
+    .project-card .tag-list {
+      margin-bottom: 20px;
     }
-
-    .project-body h4 {
-      font-size: 10px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      color: var(--brown);
-      margin: 22px 0 9px;
+    .project-card .project-bottom {
+      margin-top: auto;
+      padding-top: 20px;
     }
-
-    .project-list {
-      padding-left: 17px;
-      font-size: 12px;
-      color: var(--muted);
+    .schema-gallery {
+      margin-top: 30px;
+      align-items: start;
     }
-
-    .project-list li { padding: 3px 0; }
-
-    .tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 7px;
-      margin-top: 19px;
-    }
-
-    .tag {
-      background: #eee6dc;
-      color: var(--brown);
-      padding: 5px 9px;
-      border-radius: 5px;
-      font-size: 10px;
-    }
-
-    .project-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 17px;
-      margin-top: 24px;
-      padding-top: 18px;
-      border-top: 1px solid var(--line);
-    }
-
-    .project-links a {
-      font-size: 11px;
-      font-weight: 750;
-      text-decoration: none;
-      color: var(--brown);
-    }
-
-    .project-links a:hover { color: var(--salmon); }
-
-    .documentation {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 17px;
-    }
-
-    .doc-card {
-      display: flex;
-      align-items: center;
-      gap: 17px;
-      padding: 22px;
-      border: 1px solid var(--line);
+    .schema-card {
+      min-width: 0;
+      padding: 18px;
       background: var(--white);
-      border-radius: 14px;
+      border: 1px solid var(--border);
+      border-radius: 15px;
+      box-shadow: 0 8px 25px rgba(75, 53, 40, 0.04);
     }
-
-    .doc-icon {
-      flex: 0 0 49px;
-      height: 49px;
+    .schema-card h3 {
+      font-size: 1rem;
+      margin-bottom: 14px;
+    }
+    .schema-card img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+    }
+    .schema-caption {
+      margin-top: 12px;
+      color: var(--gray);
+      font-size: 0.82rem;
+    }
+    .environment {
+      background: var(--brown);
+      color: var(--white);
+    }
+    .environment h2 {
+      color: var(--white);
+    }
+    .environment .section-heading span {
+      color: #efb6a3;
+    }
+    .environment .intro {
+      color: #eaded4;
+    }
+    .environment-grid {
       display: grid;
-      place-items: center;
-      background: var(--beige);
-      color: var(--brown);
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 30px;
+    }
+    .environment-item {
+      padding: 20px;
+      border: 1px solid rgba(255,255,255,0.2);
       border-radius: 12px;
-      font-size: 22px;
+      background: rgba(255,255,255,0.06);
     }
-
-    .doc-card h3 { margin: 0 0 4px; font-size: 13px; }
-    .doc-card p { margin: 0; color: var(--muted); font-size: 11px; }
-    .doc-card a { text-decoration: none; }
-
-    .doc-card a:hover h3 { color: var(--salmon); }
-
-    .approach-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
+    .environment-item strong {
+      display: block;
+      color: #f1c1b0;
+      margin-bottom: 6px;
     }
-
-    .approach {
-      padding-top: 19px;
-      border-top: 1px solid rgba(241,231,219,.25);
+    .environment-item p {
+      color: #f4e9e0;
+      font-size: 0.92rem;
     }
-
-    .approach .index {
-      color: #e3b3a4;
-      font-family: Georgia, serif;
-      font-size: 29px;
+    .contact-card {
+      padding: 35px;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 15px;
     }
-
-    .approach h3 { margin: 13px 0 7px; font-size: 15px; }
-    .approach p { color: #c4b3a6; font-size: 12px; }
-
-    .contact-box {
-      background: var(--beige);
-      border-radius: 24px;
-      padding: clamp(25px, 5vw, 55px);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 30px;
+    .contact-card p {
+      color: var(--gray);
+      margin: 12px 0 24px;
     }
-
-    .contact-box h2 { max-width: 550px; }
-    .contact-box p { color: var(--muted); font-size: 13px; margin: 15px 0 0; }
-
     footer {
-      background: var(--dark);
-      color: #d4c4b6;
       padding: 28px 0;
-      font-size: 10px;
+      text-align: center;
+      color: var(--gray);
+      font-size: 0.85rem;
+      border-top: 1px solid var(--border);
     }
-
-    .footer-inner {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 18px;
+    @media (max-width: 760px) {
+      nav {
+        padding: 16px 0;
+        align-items: flex-start;
+        flex-direction: column;
+      }
+      .nav-links {
+        gap: 12px 16px;
+      }
+      .hero {
+        padding: 75px 0 65px;
+      }
+      section {
+        padding: 60px 0;
+      }
+      .about-grid,
+      .project-grid,
+      .skills-grid,
+      .schema-gallery {
+        grid-template-columns: 1fr;
+      }
+      .environment-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+      .button.secondary {
+        margin: 12px 0 0;
+      }
     }
-
-    footer a { text-decoration: none; }
-    footer a:hover { color: white; }
-
-    @media (max-width: 850px) {
-      .hero-grid { grid-template-columns: 1fr .65fr; gap: 25px; }
-      .hero-art { min-height: 270px; }
-      .monogram { font-size: 80px; }
-      .skills-grid { grid-template-columns: repeat(2, 1fr); }
-      .nav-links { gap: 12px; }
-      .nav-links a { font-size: 11px; }
-    }
-
-    @media (max-width: 620px) {
-      .container { width: min(100% - 30px, 1120px); }
-      .nav { padding: 12px 0; align-items: flex-start; flex-direction: column; gap: 12px; }
-      .nav-links { width: 100%; gap: 15px; overflow-x: auto; flex-wrap: nowrap; padding-bottom: 4px; }
-      .nav-links a { white-space: nowrap; }
-      .hero { padding: 55px 0 45px; }
-      .hero-grid { grid-template-columns: 1fr; }
-      .hero-art { min-height: 220px; border-radius: 100px 100px 20px 20px; }
-      .monogram { font-size: 75px; }
-      .stats { margin-top: 32px; }
-      .stat strong { font-size: 21px; }
-      .stat span { font-size: 9px; }
-      .stat + .stat { padding-left: 12px; }
-      .section { padding: 55px 0; }
-      .section-heading { align-items: flex-start; flex-direction: column; }
-      .about-grid, .projects-grid, .documentation, .approach-grid { grid-template-columns: 1fr; }
-      .about-grid { gap: 22px; }
-      .skills-grid { gap: 10px; }
-      .skill { padding: 17px 13px; }
-      .project-top { min-height: 140px; }
-      .contact-box { align-items: flex-start; flex-direction: column; }
-      .footer-inner { align-items: flex-start; flex-direction: column; }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after {
-        scroll-behavior: auto !important;
-        transition: none !important;
+    @media (max-width: 460px) {
+      .environment-grid {
+        grid-template-columns: 1fr;
+      }
+      .card,
+      .contact-card {
+        padding: 22px;
       }
     }
   </style>
 </head>
-
 <body>
-
-  <header class="topbar">
-    <div class="container nav">
-      <a class="brand" href="#accueil" aria-label="Retour à l'accueil">
-        <span class="brand-mark">SD</span>
-        <span>Portfolio<span style="color:var(--salmon)">.</span></span>
-      </a>
-
-      <nav class="nav-links" aria-label="Navigation principale">
-        <a href="#apropos">À propos</a>
-        <a href="#competences">Compétences</a>
-        <a href="#projets">Projets</a>
-        <a href="#documentation">Documentation</a>
-        <a href="#contact">Contact</a>
+  <header>
+    <div class="container">
+      <nav>
+        <a class="brand" href="#accueil">PORTFOLIO AIS</a>
+        <div class="nav-links">
+          <a href="#apropos">À propos</a>
+          <a href="#competences">Compétences</a>
+          <a href="#gf-elti">GF-ELTI</a>
+          <a href="#projets">Projets</a>
+          <a href="#contact">Contact</a>
+        </div>
       </nav>
     </div>
   </header>
-
   <main>
     <section class="hero" id="accueil">
       <div class="container">
-        <div class="hero-grid">
-          <div>
-            <span class="eyebrow">Portfolio professionnel · IT</span>
-
-            <h1>
-              Administrer,<br>
-              sécuriser &amp;<br>
-              <em>faire évoluer.</em>
-            </h1>
-
-            <p class="hero-copy">
-              Administration systèmes et infrastructures informatiques.
-              Découvrez mon parcours, mes projets techniques et les
-              solutions que j'ai mises en œuvre en entreprise et en formation.
-            </p>
-
-            <div class="actions">
-              <a class="btn btn-dark" href="#projets">Découvrir mes projets ↗</a>
-              <a class="btn btn-light" href="#competences">Mes compétences</a>
-            </div>
-          </div>
-
-          <div class="hero-art" aria-label="Monogramme décoratif SD">
-            <span class="monogram">SD</span>
-            <div class="art-caption">
-              Systèmes · Infrastructures · Sécurité
-            </div>
-          </div>
-        </div>
-
-        <div class="stats">
-          <div class="stat">
-            <strong>75 postes</strong>
-            <span>Parc Windows documenté en stage</span>
-          </div>
-          <div class="stat">
-            <strong>2 projets</strong>
-            <span>Entreprise &amp; formation</span>
-          </div>
-          <div class="stat">
-            <strong>AIS</strong>
-            <span>Parcours de spécialisation</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="apropos">
-      <div class="container">
-        <div class="section-heading">
-          <div>
-            <span class="eyebrow">01 · Présentation</span>
-            <h2>À propos de mon parcours</h2>
-          </div>
-          <p>Une approche orientée systèmes, disponibilité des services et sécurité des infrastructures.</p>
-        </div>
-
-        <div class="about-grid">
-          <div class="about-label">
-            <span class="number">01</span>
-            <h3>Administration des infrastructures</h3>
-            <p>Formation AIS chez Studi · Expérience pratique en environnement professionnel et laboratoire.</p>
-          </div>
-
-          <div class="about-copy">
-            <p>
-              Je développe mes compétences en administration systèmes,
-              déploiement de postes, virtualisation, supervision et
-              sécurisation des infrastructures informatiques.
-            </p>
-            <p>
-              Lors de mon stage chez GF-ELTI, j'ai participé à des opérations
-              sur un parc informatique de 75 postes Windows, à la documentation
-              de l'environnement réseau et à plusieurs projets de mise en place
-              ou d'amélioration de solutions techniques.
-            </p>
-            <p>
-              Mes projets de formation complètent cette expérience avec des
-              environnements Linux, des outils de supervision et de gestion
-              de parc, ainsi que des travaux de planification et de veille
-              en cybersécurité.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-dark" id="competences">
-      <div class="container">
-        <div class="section-heading">
-          <div>
-            <span class="eyebrow">02 · Expertise technique</span>
-            <h2>Compétences &amp; environnements</h2>
-          </div>
-          <p>Les technologies mobilisées dans mes travaux pratiques et mes projets. Le niveau de maîtrise dépend de chaque environnement.</p>
-        </div>
-
-        <div class="skills-grid">
-          <article class="skill">
-            <div class="skill-icon">OS</div>
-            <h3>Systèmes</h3>
-            <p>Windows, Windows Server 2025, Ubuntu Desktop, Ubuntu Server et Debian 12.</p>
-          </article>
-
-          <article class="skill">
-            <div class="skill-icon">VM</div>
-            <h3>Virtualisation</h3>
-            <p>Environnements VMware, Hyper-V, Proxmox et VirtualBox selon les projets.</p>
-          </article>
-
-          <article class="skill">
-            <div class="skill-icon">AD</div>
-            <h3>Services d'infrastructure</h3>
-            <p>Active Directory, intégration au domaine, DNS et DHCP.</p>
-          </article>
-
-          <article class="skill">
-            <div class="skill-icon">IT</div>
-            <h3>Support &amp; parc</h3>
-            <p>Déploiement logiciel, documentation technique, GLPI et assistance distante avec AnyDesk.</p>
-          </article>
-
-          <article class="skill">
-            <div class="skill-icon">↗</div>
-            <h3>Supervision</h3>
-            <p>Zabbix pour les travaux de supervision et de suivi des services.</p>
-          </article>
-
-          <article class="skill">
-            <div class="skill-icon">+</div>
-            <h3>Sécurité</h3>
-            <p>Wazuh en laboratoire, veille OWASP et réflexion sur la protection des sauvegardes.</p>
-          </article>
-
-          <article class="skill">
-            <div class="skill-icon">RA</div>
-            <h3>Stockage &amp; résilience</h3>
-            <p>Étude de RAID 1, tolérance aux pannes et sauvegardes immuables.</p>
-          </article>
-
-          <article class="skill">
-            <div class="skill-icon">NET</div>
-            <h3>Réseau</h3>
-            <p>Lecture et documentation de l'infrastructure réseau et du câblage.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="projets">
-      <div class="container">
-        <div class="section-heading">
-          <div>
-            <span class="eyebrow">03 · Réalisations</span>
-            <h2>Projets sélectionnés</h2>
-          </div>
-          <p>Des interventions en entreprise et des projets de formation qui illustrent mon évolution technique.</p>
-        </div>
-
-        <div class="projects-grid">
-          <article class="project">
-            <div class="project-top">
-              <span class="project-symbol">GF.</span>
-              <span class="project-type">Expérience entreprise</span>
-            </div>
-            <div class="project-body">
-              <h3>GF-ELTI</h3>
-              <p>
-                Interventions sur le parc informatique et participation
-                à l'amélioration de l'environnement technique de l'entreprise.
-              </p>
-
-              <h4>Réalisations présentées</h4>
-              <ul class="project-list">
-                <li>Déploiement et configuration de postes Windows.</li>
-                <li>Intégration au domaine Active Directory et installation d'applications.</li>
-                <li>Documentation du centre de câblage et des équipements réseau.</li>
-                <li>Assistance à distance avec AnyDesk.</li>
-                <li>Installation d'Ubuntu Desktop sur une tablette Lenovo.</li>
-                <li>Travaux sur un serveur HP Z640 et étude du RAID 1.</li>
-                <li>Mise en place d'un serveur Ubuntu dédié aux sauvegardes immuables.</li>
-              </ul>
-
-              <div class="tags">
-                <span class="tag">Windows</span>
-                <span class="tag">Active Directory</span>
-                <span class="tag">Ubuntu</span>
-                <span class="tag">Sauvegardes</span>
-              </div>
-
-              <div class="project-links">
-                <a href="#documentation">Voir la documentation ↓</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="project">
-            <div class="project-top">
-              <span class="project-symbol">ITS.</span>
-              <span class="project-type">Projet de formation</span>
-            </div>
-            <div class="project-body">
-              <h3>ITS Consulting</h3>
-              <p>
-                Environnement de laboratoire destiné à explorer
-                l'administration, la supervision et l'évolution d'une
-                infrastructure informatique.
-              </p>
-
-              <h4>Travaux réalisés et étudiés</h4>
-              <ul class="project-list">
-                <li>Déploiement de GLPI sur Debian 12.</li>
-                <li>Installation et prise en main de Zabbix.</li>
-                <li>Configuration d'un environnement Windows Server pour le domaine its.lan.</li>
-                <li>Simulation et étude de configurations réseau.</li>
-                <li>Planification d'un projet de cluster d'hyperviseurs.</li>
-                <li>Veille en sécurité des applications web sur la base d'OWASP.</li>
-              </ul>
-
-              <div class="tags">
-                <span class="tag">Debian</span>
-                <span class="tag">GLPI</span>
-                <span class="tag">Zabbix</span>
-                <span class="tag">Windows Server</span>
-                <span class="tag">OWASP</span>
-              </div>
-
-              <div class="project-links">
-                <a href="#documentation">Voir la documentation ↓</a>
-              </div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="documentation">
-      <div class="container">
-        <div class="section-heading">
-          <div>
-            <span class="eyebrow">04 · Ressources techniques</span>
-            <h2>Schémas &amp; documentation</h2>
-          </div>
-          <p>Une documentation visuelle pour mieux comprendre les environnements présentés dans mes projets.</p>
-        </div>
-
-        <div class="documentation">
-          <!--
-            IMPORTANT :
-            Remplace les chemins ci-dessous par les noms exacts de tes images
-            dans le dépôt GitHub. Exemple : docs/schema-reseau.png
-          -->
-
-          <article class="doc-card">
-            <div class="doc-icon" aria-hidden="true">⌘</div>
-            <div>
-              <h3>
-                <a href="docs/schema-infrastructure.png">
-                  Schéma d'infrastructure ↗
-                </a>
-              </h3>
-              <p>Vue d'ensemble de l'environnement informatique.</p>
-            </div>
-          </article>
-
-          <article class="doc-card">
-            <div class="doc-icon" aria-hidden="true">⌁</div>
-            <div>
-              <h3>
-                <a href="docs/schema-reseau.png">
-                  Schéma réseau ↗
-                </a>
-              </h3>
-              <p>Organisation des équipements et des connexions réseau.</p>
-            </div>
-          </article>
-        </div>
-
-        <p style="color:var(--muted);font-size:11px;margin-top:22px;">
-          Les schémas et documents publiés doivent être autorisés à la diffusion
-          et ne contenir aucune donnée confidentielle.
+        <span class="eyebrow">Administration systèmes & infrastructures</span>
+        <h1>Concevoir, administrer et sécuriser les infrastructures informatiques.</h1>
+        <p>
+          Bienvenue sur mon portfolio professionnel. J’y présente mon parcours
+          en administration des infrastructures sécurisées, mes réalisations
+          techniques et les compétences développées lors de mon stage et de
+          mes projets de formation.
         </p>
+        <a class="button" href="#gf-elti">Découvrir mes réalisations</a>
+        <a class="button secondary" href="#competences">Mes compétences</a>
       </div>
     </section>
-
-    <section class="section section-dark">
+    <section id="apropos">
       <div class="container">
         <div class="section-heading">
-          <div>
-            <span class="eyebrow">05 · Méthode de travail</span>
-            <h2>De l'analyse à la documentation</h2>
-          </div>
-          <p>Une démarche structurée pour répondre aux besoins techniques.</p>
+          <span>01 — Profil</span>
+          <h2>À propos de moi</h2>
         </div>
-
-        <div class="approach-grid">
-          <article class="approach">
-            <span class="index">01</span>
-            <h3>Comprendre le besoin</h3>
-            <p>Identifier le contexte, les contraintes techniques et l'objectif recherché.</p>
+        <div class="about-grid">
+          <div class="card">
+            <h3>Mon parcours</h3>
+            <p>
+              Je suis en formation Administrateur d’Infrastructures Sécurisées
+              (AIS) chez Studi. Mon parcours me permet de consolider mes
+              compétences en administration des systèmes, gestion des
+              infrastructures et sécurisation des environnements informatiques.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Mon approche</h3>
+            <p>
+              J’accorde une importance particulière à la disponibilité des
+              services, à la fiabilité des configurations, à la documentation
+              technique et à la protection des systèmes. Mes projets associent
+              pratique, résolution de problèmes et recherche de solutions
+              adaptées aux besoins des utilisateurs.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="skills-section" id="competences">
+      <div class="container">
+        <div class="section-heading">
+          <span>02 — Savoir-faire</span>
+          <h2>Compétences techniques</h2>
+        </div>
+        <div class="skills-grid">
+          <div class="card skill-card">
+            <h3>Administration systèmes</h3>
+            <ul>
+              <li>Windows et Windows Server</li>
+              <li>Linux : Debian et Ubuntu</li>
+              <li>Active Directory et gestion des comptes</li>
+              <li>Installation et configuration de systèmes</li>
+              <li>Gestion des postes de travail</li>
+            </ul>
+          </div>
+          <div class="card skill-card">
+            <h3>Infrastructures et virtualisation</h3>
+            <ul>
+              <li>Environnements VMware</li>
+              <li>Notions de haute disponibilité</li>
+              <li>Réseaux locaux et équipements</li>
+              <li>Documentation d’architecture</li>
+              <li>Diagnostic et résolution d’incidents</li>
+            </ul>
+          </div>
+          <div class="card skill-card">
+            <h3>Sécurité et sauvegarde</h3>
+            <ul>
+              <li>Principes de sécurisation des systèmes</li>
+              <li>Sauvegardes et protection contre les modifications</li>
+              <li>Veille sur la sécurité des applications web</li>
+              <li>Surveillance des infrastructures</li>
+              <li>Prise en compte des risques informatiques</li>
+            </ul>
+          </div>
+          <div class="card skill-card">
+            <h3>Outils techniques</h3>
+            <ul>
+              <li>GLPI : gestion de parc et de tickets</li>
+              <li>Zabbix : supervision</li>
+              <li>AnyDesk : assistance à distance</li>
+              <li>Rufus : création de supports d’installation</li>
+              <li>Trello et Google Alerts</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="gf-elti">
+      <div class="container">
+        <div class="section-heading">
+          <span>03 — Expérience pratique</span>
+          <h2>Stage chez GF-ELTI</h2>
+        </div>
+        <p class="intro">
+          Durant mon stage au sein de GF-ELTI, entreprise italienne basée dans
+          la région de Bergame, j’ai participé à différentes interventions
+          liées au déploiement des postes, à l’assistance à distance, à
+          l’installation de systèmes et à la documentation de l’infrastructure.
+          Les interventions ont été réalisées en tenant compte de
+          l’environnement existant et des contraintes de l’entreprise.
+        </p>
+        <div class="project-grid" style="margin-top: 30px;">
+          <article class="card project-card">
+            <span class="project-number">MISSION 01</span>
+            <h3>Déploiement et configuration des postes</h3>
+            <p>
+              J’ai participé à la préparation de 75 postes Windows, comprenant
+              35 ordinateurs fixes et 40 ordinateurs portables. Les opérations
+              incluaient la préparation des machines, leur renommage,
+              l’intégration au domaine Active Directory et l’installation des
+              logiciels nécessaires.
+            </p>
+            <div class="tag-list">
+              <span class="tag">Windows</span>
+              <span class="tag">Active Directory</span>
+              <span class="tag">Déploiement</span>
+            </div>
           </article>
-
-          <article class="approach">
-            <span class="index">02</span>
-            <h3>Mettre en œuvre</h3>
-            <p>Choisir une solution adaptée, réaliser les opérations et vérifier le résultat.</p>
+          <article class="card project-card">
+            <span class="project-number">MISSION 02</span>
+            <h3>Documentation du centre de câblage</h3>
+            <p>
+              J’ai relevé et organisé les informations relatives aux équipements
+              et aux liaisons du centre de câblage, notamment l’arrivée de la
+              fibre externe, les équipements réseau, la téléphonie et les
+              connexions vers les postes utilisateurs. L’objectif était de
+              faciliter la compréhension de l’infrastructure et les futures
+              interventions techniques.
+            </p>
+            <div class="tag-list">
+              <span class="tag">Réseau</span>
+              <span class="tag">Téléphonie</span>
+              <span class="tag">Documentation</span>
+            </div>
           </article>
-
-          <article class="approach">
-            <span class="index">03</span>
-            <h3>Documenter</h3>
-            <p>Tracer les interventions, conserver les schémas utiles et formaliser les résultats.</p>
+          <article class="card project-card">
+            <span class="project-number">MISSION 03</span>
+            <h3>Assistance à distance avec AnyDesk</h3>
+            <p>
+              J’ai utilisé AnyDesk pour participer à la résolution d’un
+              problème d’accès à un poste utilisateur situé sur un autre site.
+              Cette solution permettait d’effectuer un diagnostic à distance
+              et de limiter les déplacements.
+            </p>
+            <div class="tag-list">
+              <span class="tag">Support informatique</span>
+              <span class="tag">AnyDesk</span>
+            </div>
+          </article>
+          <article class="card project-card">
+            <span class="project-number">MISSION 04</span>
+            <h3>Installation d’Ubuntu Desktop sur tablette Lenovo</h3>
+            <p>
+              J’ai créé une clé USB bootable à l’aide de Rufus et de l’image ISO
+              d’Ubuntu, puis installé Ubuntu Desktop sur une tablette Lenovo.
+              Ce projet m’a permis de mettre en pratique l’installation d’un
+              système Linux sur un équipement initialement utilisé dans un
+              environnement Windows.
+            </p>
+            <div class="tag-list">
+              <span class="tag">Ubuntu Desktop</span>
+              <span class="tag">Linux</span>
+              <span class="tag">Rufus</span>
+            </div>
+          </article>
+          <article class="card project-card">
+            <span class="project-number">MISSION 05</span>
+            <h3>Serveur physique HP Z640 et tolérance aux pannes</h3>
+            <p>
+              J’ai travaillé sur un serveur physique HP Z640 dans le cadre
+              d’un objectif de tolérance aux pannes des disques en RAID 1.
+              Face aux limites rencontrées lors de la configuration du RAID
+              dans le BIOS, j’ai exploré une solution reposant sur Windows
+              Server 2025 et Intel Rapid Storage Technology Enterprise.
+              Cette intervention m’a permis de travailler sur les difficultés
+              d’installation et de configuration d’un serveur physique.
+            </p>
+            <div class="tag-list">
+              <span class="tag">HP Z640</span>
+              <span class="tag">Windows Server 2025</span>
+              <span class="tag">RAID 1</span>
+            </div>
+          </article>
+          <article class="card project-card">
+            <span class="project-number">MISSION 06</span>
+            <h3>Serveur Ubuntu Server dédié aux sauvegardes</h3>
+            <p>
+              J’ai travaillé sur la mise en place d’un serveur Ubuntu Server
+              dédié à la conservation de sauvegardes protégées contre les
+              modifications. La rétention prévue était de deux semaines,
+              avec pour objectif de renforcer la capacité de récupération
+              en cas d’incident, notamment lors d’une attaque par rançongiciel.
+            </p>
+            <div class="tag-list">
+              <span class="tag">Ubuntu Server</span>
+              <span class="tag">Sauvegardes</span>
+              <span class="tag">Cybersécurité</span>
+            </div>
+          </article>
+        </div>
+        <div style="margin-top: 55px;">
+          <div class="section-heading">
+            <span>Documentation visuelle</span>
+            <h2>Schémas de l’infrastructure</h2>
+          </div>
+          <p class="intro">
+            Ces schémas présentent de manière synthétique l’environnement
+            informatique et l’organisation du câblage. Les informations
+            sensibles de l’entreprise ne sont pas exposées.
+          </p>
+          <div class="schema-gallery">
+            <figure class="schema-card">
+              <h3>Architecture générale du parc informatique</h3>
+              <a href="schema-infrastructure-gf-elti.png" target="_blank" rel="noopener">
+                <img
+                  src="schema-infrastructure-gf-elti.png"
+                  alt="Schéma de l’architecture générale du parc informatique GF-ELTI"
+                  loading="lazy"
+                >
+              </a>
+              <figcaption class="schema-caption">
+                Architecture générale du parc informatique GF-ELTI.
+              </figcaption>
+            </figure>
+            <figure class="schema-card">
+              <h3>Centre de câblage structuré</h3>
+              <a href="schéma-réseau-gf-elti.png" target="_blank" rel="noopener">
+                <img
+                  src="schéma-réseau-gf-elti.png"
+                  alt="Schéma du centre de câblage structuré et des équipements réseau GF-ELTI"
+                  loading="lazy"
+                >
+              </a>
+              <figcaption class="schema-caption">
+                Organisation des liaisons réseau et téléphoniques.
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="environment">
+      <div class="container">
+        <div class="section-heading">
+          <span>Vue d’ensemble</span>
+          <h2>Environnement technique</h2>
+        </div>
+        <p class="intro">
+          Les interventions présentées s’inscrivent dans un environnement
+          composé de postes utilisateurs, de systèmes Windows et Linux,
+          d’équipements réseau et de services d’infrastructure.
+        </p>
+        <div class="environment-grid">
+          <div class="environment-item">
+            <strong>75 postes Windows</strong>
+            <p>35 postes fixes et 40 ordinateurs portables.</p>
+          </div>
+          <div class="environment-item">
+            <strong>Tablette Lenovo</strong>
+            <p>Équipement installé sous Ubuntu Desktop.</p>
+          </div>
+          <div class="environment-item">
+            <strong>Serveur HP Z640</strong>
+            <p>Projet serveur physique et tolérance aux pannes.</p>
+          </div>
+          <div class="environment-item">
+            <strong>Ubuntu Server</strong>
+            <p>Serveur dédié au projet de sauvegardes protégées.</p>
+          </div>
+          <div class="environment-item">
+            <strong>Services existants</strong>
+            <p>Active Directory et environnement VMware.</p>
+          </div>
+          <div class="environment-item">
+            <strong>Assistance et réseau</strong>
+            <p>AnyDesk, centre de câblage et téléphonie.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="projects-section" id="projets">
+      <div class="container">
+        <div class="section-heading">
+          <span>04 — Projets de formation</span>
+          <h2>Projet d’infrastructure ITS</h2>
+        </div>
+        <p class="intro">
+          Dans le cadre de ma formation AIS, j’ai également travaillé sur un
+          environnement de laboratoire destiné à mettre en pratique
+          l’administration des services, la supervision, la gestion des
+          incidents et la préparation à la sécurisation des infrastructures.
+        </p>
+        <div class="project-grid" style="margin-top: 30px;">
+          <article class="card project-card">
+            <span class="project-number">PROJET 01</span>
+            <h3>Gestion des incidents avec GLPI</h3>
+            <p>
+              J’ai préparé un environnement Debian 12 pour héberger GLPI.
+              L’objectif était de disposer d’un outil de gestion des demandes
+              et des incidents permettant de structurer le suivi des
+              interventions informatiques.
+            </p>
+            <div class="tag-list">
+              <span class="tag">Debian 12</span>
+              <span class="tag">GLPI</span>
+              <span class="tag">Support IT</span>
+            </div>
+          </article>
+          <article class="card project-card">
+            <span class="project-number">PROJET 02</span>
+            <h3>Supervision avec Zabbix</h3>
+            <p>
+              J’ai travaillé sur l’installation et la configuration d’un
+              environnement de supervision avec Zabbix. Ce projet porte sur
+              le suivi de l’état des équipements et des services, afin de
+              faciliter la détection des anomalies.
+            </p>
+            <div class="tag-list">
+              <span class="tag">Zabbix</span>
+              <span class="tag">Supervision</span>
+              <span class="tag">Debian</span>
+            </div>
+          </article>
+          <article class="card project-card">
+            <span class="project-number">PROJET 03</span>
+            <h3>Services Windows Server et domaine</h3>
+            <p>
+              J’ai travaillé sur un environnement Windows Server 2025 pour
+              mettre en pratique l’administration d’un domaine Active Directory
+              nommé its.lan et l’accès distant par RDP.
+            </p>
+            <div class="tag-list">
+              <span class="tag">Windows Server 2025</span>
+              <span class="tag">Active Directory</span>
+              <span class="tag">RDP</span>
+            </div>
+          </article>
+          <article class="card project-card">
+            <span class="project-number">PROJET 04</span>
+            <h3>Préparation d’une évolution de l’infrastructure</h3>
+            <p>
+              J’ai organisé les étapes d’un projet visant à réduire le risque
+              d’interruption lié à la dépendance à un seul hyperviseur.
+              La planification comprenait l’analyse du besoin, le choix de
+              la solution, la préparation du matériel, les tests de
+              basculement et la documentation.
+            </p>
+            <div class="tag-list">
+              <span class="tag">Virtualisation</span>
+              <span class="tag">Disponibilité</span>
+              <span class="tag">Trello</span>
+            </div>
+          </article>
+          <article class="card project-card">
+            <span class="project-number">PROJET 05</span>
+            <h3>Veille sur la sécurité des applications web</h3>
+            <p>
+              J’ai mis en place une démarche de veille portant sur les risques
+              de sécurité des applications web, en m’appuyant notamment sur
+              les ressources OWASP et des alertes automatisées. L’objectif
+              était de suivre les évolutions et de repérer les informations
+              pertinentes pour la sécurisation des applications.
+            </p>
+            <div class="tag-list">
+              <span class="tag">OWASP</span>
+              <span class="tag">Veille</span>
+              <span class="tag">Google Alerts</span>
+            </div>
+          </article>
+          <article class="card project-card">
+            <span class="project-number">ENVIRONNEMENT</span>
+            <h3>Réseau et documentation</h3>
+            <p>
+              Le laboratoire s’appuie également sur des outils de simulation
+              réseau, des supports de documentation et une organisation des
+              tâches pour préparer les interventions et suivre l’avancement
+              des projets.
+            </p>
+            <div class="tag-list">
+              <span class="tag">Packet Tracer</span>
+              <span class="tag">Documentation</span>
+              <span class="tag">Organisation</span>
+            </div>
           </article>
         </div>
       </div>
     </section>
-
-    <section class="section" id="contact">
+    <section id="contact">
       <div class="container">
-        <div class="contact-box">
-          <div>
-            <span class="eyebrow">06 · Contact</span>
-            <h2>Construisons la suite de mon parcours professionnel.</h2>
-            <p>
-              Pour échanger sur mes projets, mes compétences ou une opportunité
-              en administration systèmes et infrastructures.
-            </p>
-          </div>
-          <a class="btn btn-dark" href="https://github.com/" target="_blank" rel="noopener noreferrer">
-            Retrouver GitHub ↗
+        <div class="section-heading">
+          <span>05 — Échange professionnel</span>
+          <h2>Contact</h2>
+        </div>
+        <div class="contact-card">
+          <h3>Échangeons autour des infrastructures informatiques</h3>
+          <p>
+            Je suis intéressée par les opportunités liées à l’administration
+            systèmes, à l’exploitation des infrastructures et à leur
+            sécurisation.
+          </p>
+          <a
+            class="button"
+            href="https://github.com/"
+            target="_blank"
+            rel="noopener"
+          >
+            Découvrir GitHub
           </a>
         </div>
       </div>
     </section>
   </main>
-
   <footer>
-    <div class="container footer-inner">
-      <span>Portfolio technique · Administration systèmes &amp; infrastructures</span>
-      <a href="#accueil">Retour en haut ↑</a>
-      <span>© 2026</span>
+    <div class="container">
+      Portfolio professionnel — Administration des Infrastructures Sécurisées
     </div>
   </footer>
-
 </body>
 </html>
