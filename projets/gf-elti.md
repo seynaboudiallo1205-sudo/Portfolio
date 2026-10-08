@@ -4,7 +4,7 @@
 
 Durant mon stage au sein de **GF-ELTI**, entreprise italienne basée à Bergame, j’ai participé à plusieurs interventions liées à l’administration des systèmes et des infrastructures informatiques.
 
-L’environnement informatique comprenait notamment un parc d’environ **75 postes Windows**, une tablette Lenovo sous Ubuntu Desktop, un serveur physique HP Z640, un environnement virtualisé VMware, un domaine Active Directory ainsi qu’une infrastructure réseau documentée.
+L’environnement informatique comprenait notamment un parc d’environ **100 postes Windows**, une tablette Lenovo sous Ubuntu Desktop, un serveur physique HP Z640, un environnement virtualisé VMware, un domaine Active Directory ainsi qu’une infrastructure réseau documentée.
 
 > 🔒 Certaines informations, captures d’écran et photographies ne sont pas présentées afin de respecter les règles de confidentialité de l’entreprise.
 
@@ -38,6 +38,7 @@ Les principales étapes étaient :
 * vérification du fonctionnement des postes.
 
 Cette mission m’a permis de mettre en pratique mes connaissances en **administration Windows et Active Directory**.
+
 
 ---
 
