@@ -36,7 +36,7 @@ Les principales étapes étaient :
 * configuration des comptes et des droits ;
 * installation des logiciels nécessaires ;
 * vérification du fonctionnement des postes.
-
+![Schéma de l’infrastructure GF-ELTI](../schéma-infrastructure-gf-elti.jpg)
 Cette mission m’a permis de mettre en pratique mes connaissances en **administration Windows et Active Directory**.
 
 
