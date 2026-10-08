@@ -16,7 +16,6 @@ Les principales missions qui m’ont été confiées étaient :
 
 * Déployer et préparer les nouveaux postes informatiques.
 * Intégrer les postes au domaine Active Directory.
-* Faciliter l’assistance à distance des utilisateurs.
 * Valoriser du matériel existant grâce à Linux.
 * Participer à l’administration et à l’évolution de l’infrastructure.
 * Renforcer la protection des données grâce aux sauvegardes.
@@ -39,7 +38,6 @@ Les principales étapes étaient :
 ![Schéma de l’infrastructure GF-ELTI](../schéma-infrastructure-gf-elti.jpg)
 Cette mission m’a permis de mettre en pratique mes connaissances en **administration Windows et Active Directory**.
 
-
 ---
 
 ## 🌐 2. Documentation de l’infrastructure réseau
@@ -59,14 +57,6 @@ La documentation concernait notamment :
 Cette activité m’a permis de mieux comprendre l’organisation physique d’une infrastructure informatique et l’importance d’une documentation claire pour faciliter les interventions.
 
 ![Schéma de l’infrastructure GF-ELTI](../schema-reseau-gf-elti.jpg)
-
----
-
-## 🖥️ 3. Support à distance avec AnyDesk
-
-Afin de faciliter les interventions sur les postes situés sur d’autres sites, j’ai participé à la mise en place et à l’utilisation d’**AnyDesk**.
-
-Cette solution permettait aux techniciens d'accéder à distance aux postes des utilisateurs afin de réaliser des opérations de support et de dépannage.
 
 ---
 
@@ -118,7 +108,6 @@ Cette mission m’a permis de mieux comprendre l’importance des stratégies de
 | Annuaire       | Active Directory                     |
 | Virtualisation | VMware                               |
 | Réseau         | TCP/IP, switches, routeurs, fibre    |
-| Support        | AnyDesk                              |
 | Serveur        | HP Z640                              |
 | Stockage       | RAID 1, SAN, SATA/SAS                |
 | Sauvegarde     | Ubuntu Server, sauvegardes immuables |
